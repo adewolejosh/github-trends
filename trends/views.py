@@ -45,5 +45,5 @@ class GithubTrendsView(APIView):
             # returning the result gotten from above with a status 200
             return Response(serializer.data, status=status.HTTP_200_OK)
 
-        except ConnectionError or TimeoutError:
+        except ConnectionError or TimeoutError or KeyError:
             raise
