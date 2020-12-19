@@ -15,7 +15,7 @@ class GithubTrendsView(APIView):
     A View which displays the result of the analysed github trending repos
     """
 
-    def get(self):
+    def get(self, request):
         try:
             # calculating thirty days ago
             current_date, t_minus_day = datetime.date.today(), datetime.timedelta(-30)
